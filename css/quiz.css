@@ -80,10 +80,17 @@
 
 }
 
-@media(max-width:400px) {
+@media(max-width:450px){
 
     .choice-card{
-        width:130px;
+
+        width:115px;
     }
-    
+
+    #answers{
+
+        position: absolute;
+        top: 27%;       
+    }
+
 }
