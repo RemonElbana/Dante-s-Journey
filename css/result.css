@@ -457,8 +457,13 @@ border-radius:0;
 
 .result-title{
 
-width:210px;
+        width: 100px;
+        margin: 40px auto 0px;
 
+}
+
+#resultSentence{
+    font-size: 30px;
 }
 
 .card-container{
@@ -497,7 +502,11 @@ padding:0 15px;
 
 .claim-btn img{
 
-width:155px;
+        width: 130px;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0);
+        bottom: -35px;
 
 }
 
