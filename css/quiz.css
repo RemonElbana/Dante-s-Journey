@@ -80,7 +80,7 @@
 
 }
 
-@media(max-width:450px){
+@media(max-width:385px){
 
     .choice-card{
 
@@ -90,7 +90,7 @@
     #answers{
 
         position: absolute;
-        top: 27%;       
+        top: 30%;       
     }
 
 }
