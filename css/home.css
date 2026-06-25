@@ -1,0 +1,101 @@
+.desktop-wrapper::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background-image:
+    url("../assets/backgrounds/home-bg.jpeg");
+
+    background-size:cover;
+    background-position:center;
+
+    filter:blur(35px);
+
+    transform:scale(1.2);
+
+    opacity:.7;
+}
+
+.home-page{
+
+    width:100%;
+    height:100%;
+
+    position:relative;
+
+    background-image:
+    url("../assets/backgrounds/home-bg.jpeg");
+
+    background-size:cover;
+    background-position:center;
+}
+
+.image-btn{
+
+    position:absolute;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    transition:.3s;
+}
+
+.image-btn img{
+
+    width:220px;
+}
+
+.image-btn:hover{
+
+    transform:
+    translateX(-50%)
+    scale(1.05);
+}
+
+.start-btn{
+
+    top: 40%;
+}
+
+.discover-btn{
+
+    top:49.1%;
+}
+
+.credits-btn{
+
+    top:59%;
+}
+
+@media(max-width:768px){
+
+    .desktop-wrapper::before{
+
+        display:none;
+    }
+
+    .image-btn img{
+
+        width:200px;
+    }
+
+    .start-btn{
+
+    top:35%;
+    }
+
+    .discover-btn{
+
+        top:47%;
+    }
+
+    .credits-btn{
+
+        top:59%;
+}
+
+}

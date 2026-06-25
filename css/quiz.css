@@ -1,0 +1,81 @@
+.quiz-page{
+
+    width:100%;
+    height:100%;
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+
+    position:relative;
+}
+
+.overlay{
+
+    width:100%;
+    height:100%;
+}
+
+.quiz-container{
+
+    width:100%;
+    height:100%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:flex-end;
+
+    padding-bottom:100px;
+}
+
+#answers{
+
+    width:100%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:flex-end;
+
+    column-gap:50px;
+
+    flex-wrap:wrap;
+}
+
+.choice-card{
+
+    width:140px;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.choice-card:hover{
+
+    transform:
+    translateY(-10px);
+}
+
+@media(max-width:768px){
+
+    .quiz-container{
+
+        padding-bottom:110px;
+    }
+
+    .choice-card{
+
+        width:150px;
+    }
+
+    #answers{
+
+        position: absolute;
+        top: 30%;       
+    }
+
+}

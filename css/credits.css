@@ -1,0 +1,414 @@
+/* ========================================= */
+/* CREDITS PAGE */
+/* ========================================= */
+
+.credits-page{
+
+    width:100%;
+    height:100%;
+
+    position:relative;
+
+    overflow:hidden;
+
+    background-image:
+    url("../assets/backgrounds/credits-bg.jpeg");
+
+    background-size:cover;
+    background-position:center;
+
+}
+
+
+/* ========================================= */
+/* ICONS */
+/* ========================================= */
+
+.credits-page a{
+
+    position:absolute;
+
+    display:flex;
+
+    justify-content:center;
+    align-items:center;
+
+    width:44px;
+    height:44px;
+
+    z-index:20;
+
+    transition:
+    transform .25s,
+    filter .25s;
+
+}
+
+.credits-page a img{
+
+    width:100%;
+    height:100%;
+
+    object-fit:contain;
+
+}
+
+.credits-page a:hover{
+
+    transform:scale(1.08);
+
+    filter:
+    drop-shadow(
+        0 0 10px
+        rgba(255,220,160,.75)
+    );
+
+}
+
+
+/* ========================================= */
+/* MARK */
+/* ========================================= */
+
+/* Behance */
+
+.mark-behance{
+
+left: 26.5%;
+top: 22.5%;
+
+}
+
+/* Facebook */
+
+.mark-facebook{
+
+left: 26.5%;
+    top: 26.3%;
+}
+
+/* WhatsApp */
+
+.mark-whatsapp{
+
+    left:26.5%;
+    top: 30.2%;
+
+}
+
+/* TikTok */
+
+.mark-tiktok{
+
+    right:26.5%;
+    top: 22.5%;
+
+}
+
+/* Instagram */
+
+.mark-instagram{
+
+    right:26.5%;
+    top: 26.3%;
+
+}
+
+
+/* ========================================= */
+/* REMON */
+/* ========================================= */
+
+/* X */
+
+.remon-x{
+
+    left: 26.5%;
+    top: 57.8%;
+
+}
+
+/* Portfolio */
+
+.remon-portfolio{
+
+    left: 26.5%;
+    top: 61.8%;
+
+}
+
+/* LinkedIn */
+
+.remon-linkedin{
+
+    right:26.5%;
+    top: 57.8%;
+
+}
+
+/* Ark */
+
+.remon-ark{
+
+    right:26.5%;
+    top: 61.8%;
+
+}
+
+
+/* ========================================= */
+/* HOME */
+/* ========================================= */
+
+.home-btn{
+
+    position:absolute;
+
+    left:50%;
+    bottom:34px;
+
+    width:155px;
+
+    transform:
+    translateX(-50%);
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.home-btn:hover{
+
+    transform:
+    translateX(-50%)
+    scale(1.05);
+
+}
+/* ========================================= */
+/* DESKTOP WRAPPER */
+/* ========================================= */
+
+.desktop-wrapper{
+
+    width:100vw;
+    height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+    align-items:center;
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.desktop-wrapper::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background-image:
+    url("../assets/backgrounds/credits-bg.jpeg");
+
+    background-size:cover;
+    background-position:center;
+
+    filter:blur(35px);
+
+    transform:scale(1.15);
+
+    opacity:.75;
+
+}
+
+
+/* ========================================= */
+/* MOBILE FRAME */
+/* ========================================= */
+
+.mobile-frame{
+
+    width:430px;
+    height:932px;
+
+    position:relative;
+
+    overflow:hidden;
+
+    border-radius:22px;
+
+    box-shadow:
+
+    0 0 40px
+
+    rgba(0,0,0,.65);
+
+    z-index:5;
+
+}
+
+
+/* ========================================= */
+/* SMALL ANIMATION */
+/* ========================================= */
+
+.credits-page a:active{
+
+    transform:scale(.92);
+
+}
+
+.home-btn:active{
+
+    transform:
+    translateX(-50%)
+    scale(.95);
+
+}
+
+
+/* ========================================= */
+/* MOBILE */
+/* ========================================= */
+
+@media(max-width:768px){
+
+.desktop-wrapper::before{
+
+display:none;
+
+}
+
+.mobile-frame{
+
+width:100%;
+height:100vh;
+
+border-radius:0;
+
+}
+
+
+/* ---------- MARK ---------- */
+
+.mark-behance{
+
+left: 27%;
+top: 22.3%;
+
+}
+
+.mark-facebook{
+
+left: 27%;
+top: 26.3%;
+
+}
+
+.mark-whatsapp{
+
+left: 27%;
+top: 30.2%;
+
+}
+
+.mark-tiktok{
+
+right: 27%;
+top: 22.3%;
+
+}
+
+.mark-instagram{
+
+right: 27%;
+top: 26.3%;
+
+}
+
+
+/* ---------- REMON ---------- */
+
+.remon-x{
+
+left: 27%;
+top: 57.7%;
+
+}
+
+.remon-portfolio{
+
+left: 27%;
+top: 61.6%;
+
+}
+
+.remon-linkedin{
+
+right: 27%;
+top: 57.7%;
+
+}
+
+.remon-ark{
+
+right: 27%;
+top: 61.6%;
+
+}
+
+
+/* ---------- HOME ---------- */
+
+.home-btn{
+
+width:145px;
+
+bottom:36px;
+
+}
+
+}
+
+
+/* ========================================= */
+/* LARGE DESKTOP */
+/* ========================================= */
+
+@media(min-width:1200px){
+
+.mobile-frame{
+
+transform:scale(.95);
+
+}
+
+}
+
+
+/* ========================================= */
+/* ULTRA SMALL DEVICES */
+/* ========================================= */
+
+@media(max-width:390px){
+
+.credits-page a{
+
+width:40px;
+height:40px;
+
+}
+
+.home-btn{
+
+width:135px;
+
+}
+
+}

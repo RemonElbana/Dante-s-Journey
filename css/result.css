@@ -1,0 +1,526 @@
+.result-page{
+
+    width:100%;
+    height:100%;
+
+    position:relative;
+
+    overflow:hidden;
+
+    background-image:
+    url("../assets/backgrounds/result-bg.jpeg");
+
+    background-size:cover;
+    background-position:center;
+
+}
+
+
+/* ========================= */
+/* Title */
+/* ========================= */
+
+.result-title{
+
+    width:240px;
+
+    display:block;
+
+    margin:45px auto 20px;
+
+}
+
+
+/* ========================= */
+/* Card */
+/* ========================= */
+
+.card-section{
+
+    display:flex;
+
+    justify-content:center;
+
+    margin-top:15px;
+
+}
+
+.card-container{
+
+    width:320px;
+
+    height:450px;
+
+    perspective:1500px;
+
+    transition:.35s;
+
+}
+
+.card-container.glow{
+
+    animation:
+    glow 1s ease;
+
+}
+
+@keyframes glow{
+
+0%{
+
+filter:
+drop-shadow(0 0 0px gold);
+
+}
+
+50%{
+
+filter:
+drop-shadow(
+0 0 35px
+rgba(255,210,100,.85)
+);
+
+}
+
+100%{
+
+filter:
+drop-shadow(0 0 0px gold);
+
+}
+
+}
+
+.card-inner{
+
+    width:100%;
+    height:100%;
+
+    position:relative;
+
+    transform-style:preserve-3d;
+
+    transition:
+    transform .85s cubic-bezier(.22,.61,.36,1);
+
+    cursor:pointer;
+
+}
+
+.card-inner.flipped{
+
+    transform:
+    rotateY(180deg);
+
+}
+
+.card-face{
+
+    position:absolute;
+
+    width:100%;
+    height:100%;
+
+    backface-visibility:hidden;
+
+}
+
+.card-face img{
+
+    width:100%;
+    height:100%;
+
+    object-fit:contain;
+
+}
+
+.card-back{
+
+    transform:
+    rotateY(180deg);
+
+}
+
+
+/* ========================= */
+/* Reveal Text */
+/* ========================= */
+
+.click-text{
+
+    width:270px;
+
+    display:block;
+
+    margin:25px auto;
+
+    transition:.35s;
+
+}
+
+.click-text.hide{
+
+    opacity:0;
+    display:none;
+}
+
+
+/* ========================= */
+/* Result Info */
+/* ========================= */
+
+.result-info{
+
+    opacity:0;
+
+    transform:
+    translateY(30px);
+
+    transition:.45s;
+
+    text-align:center;
+
+    color:white;
+
+    padding:0 35px;
+
+}
+
+.result-info.show{
+
+    opacity:1;
+
+    transform:
+    translateY(0);
+
+}
+
+.result-info{
+
+    opacity:0;
+
+    transform:translateY(25px);
+
+    transition:.45s;
+
+    text-align:center;
+
+    padding:0 25px;
+
+}
+
+.result-info.show{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+#resultSentence{
+
+    color:white;
+
+    font-size:42px;
+
+    line-height:1.4;
+
+    text-shadow:
+
+    0 0 8px rgba(240, 225, 23, 0.55);
+
+    font-weight:100;
+
+    margin-top:20px;
+
+}
+
+#resultSentence u{
+
+    text-decoration-thickness:3px;
+
+    text-underline-offset:8px;
+
+}
+/* ========================= */
+/* Claim Button */
+/* ========================= */
+
+.claim-btn{
+
+    display:block;
+
+    margin:35px auto 0;
+
+    background:none;
+
+    border:none;
+
+    cursor:pointer;
+
+    opacity:0;
+
+    transform:
+    translateY(25px);
+
+    transition:
+    opacity .45s,
+    transform .45s;
+
+}
+
+.claim-btn.show{
+
+    opacity:1;
+
+    transform:
+    translateY(0);
+
+}
+
+.claim-btn img{
+
+    width:180px;
+
+    transition:.3s;
+
+}
+
+.claim-btn:hover img{
+
+    transform:
+    scale(1.06);
+
+}
+
+
+/* ========================= */
+/* Popup */
+/* ========================= */
+
+.claim-popup{
+
+    position:absolute;
+
+    left:50%;
+
+    top:52%;
+
+    transform:
+    translate(-50%,-50%)
+    scale(.8);
+
+    width:320px;
+
+    padding:25px;
+
+    text-align:center;
+
+    background:
+
+    rgba(0,0,0,.88);
+
+    border:
+
+    2px solid
+
+    rgba(255,210,120,.8);
+
+    border-radius:16px;
+
+    color:white;
+
+    opacity:0;
+
+    pointer-events:none;
+
+    transition:.35s;
+
+    z-index:100;
+
+}
+
+.claim-popup.show{
+
+    opacity:1;
+
+    transform:
+    translate(-50%,-50%)
+    scale(1);
+
+}
+
+.claim-popup h2{
+
+    font-size:34px;
+
+    margin-bottom:10px;
+
+}
+
+.claim-popup p{
+
+    font-size:20px;
+
+}
+
+
+/* ========================= */
+/* Desktop */
+/* ========================= */
+
+.desktop-wrapper{
+
+    width:100vw;
+
+    height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.desktop-wrapper::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background-image:
+
+    url("../assets/backgrounds/result-bg.jpeg");
+
+    background-size:cover;
+
+    background-position:center;
+
+    filter:blur(35px);
+
+    transform:scale(1.15);
+
+    opacity:.75;
+
+}
+
+.mobile-frame{
+
+    width:430px;
+
+    height:932px;
+
+    position:relative;
+
+    overflow:hidden;
+
+    border-radius:22px;
+
+    box-shadow:
+
+    0 0 40px
+
+    rgba(0,0,0,.65);
+
+    z-index:5;
+
+}
+
+
+/* ========================= */
+/* Mobile */
+/* ========================= */
+
+@media(max-width:768px){
+
+.desktop-wrapper::before{
+
+display:none;
+
+}
+
+.mobile-frame{
+
+width:100%;
+
+height:100vh;
+
+border-radius:0;
+
+}
+
+.result-title{
+
+width:210px;
+
+}
+
+.card-container{
+
+width:285px;
+
+height:405px;
+
+}
+
+.you-are{
+
+font-size:18px;
+
+}
+
+#characterName{
+
+font-size:42px;
+
+}
+
+#characterTitle{
+
+font-size:24px;
+
+}
+
+#characterDescription{
+
+font-size:16px;
+
+padding:0 15px;
+
+}
+
+.claim-btn img{
+
+width:155px;
+
+}
+
+.claim-popup{
+
+width:280px;
+
+padding:20px;
+
+}
+
+.claim-popup h2{
+
+font-size:28px;
+
+}
+
+.claim-popup p{
+
+font-size:17px;
+
+}
+
+}

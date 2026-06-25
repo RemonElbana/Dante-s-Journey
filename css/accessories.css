@@ -1,0 +1,501 @@
+/* ========================================= */
+/* PAGE */
+/* ========================================= */
+
+.discover-page{
+
+    width:100%;
+    height:100%;
+
+    position:relative;
+
+    overflow:hidden;
+
+    background-image:
+    url("../assets/backgrounds/discover-accessory-bg.jpeg");
+
+    background-size:cover;
+    background-position:center;
+
+}
+
+
+/* ========================================= */
+/* TITLE */
+/* ========================================= */
+
+.discover-title{
+
+    text-align:center;
+
+    font-size:60px;
+
+    padding-top:45px;
+
+    color:#00000000;
+
+}
+
+
+/* ========================================= */
+/* PREVIEW CONTAINER */
+/* ========================================= */
+
+.preview-container{
+
+    position:relative;
+
+    width:100%;
+
+    height:420px;
+
+    margin-top:30px;
+
+}
+
+
+/* ========================================= */
+/* CENTER FRAME */
+/* ========================================= */
+
+.frame-container{
+
+    position:absolute;
+
+    left:50%;
+    top:50%;
+
+    transform:
+    translate(-50%,-50%);
+
+    width:285px;
+    height:285px;
+
+}
+
+.frame{
+
+    position:absolute;
+
+    inset:0;
+
+    width:100%;
+    height:100%;
+
+    object-fit:contain;
+    display:none;
+    z-index:5;
+
+}
+
+.current-accessory{
+
+    position:absolute;
+
+    left:50%;
+    top:50%;
+
+    transform:
+    translate(-50%,-50%);
+
+    width:215px;
+    height:215px;
+
+    object-fit:contain;
+
+    z-index:2;
+
+    transition:
+    .35s;
+
+}
+
+
+/* ========================================= */
+/* SIDE PREVIEWS */
+/* ========================================= */
+
+.preview{
+
+    position:absolute;
+
+    top:50%;
+
+    width:130px;
+    height:130px;
+
+    object-fit:contain;
+
+    opacity: 0.6;
+
+    filter: brightness(.7);
+    
+    transform: scale(.85);
+
+    transition:
+    .35s;
+
+}
+
+.preview-left{
+
+    left:-18px;
+
+    transform:
+    translateY(-50%)
+    scale(.85);
+
+}
+
+.preview-right{
+
+    right:-18px;
+
+    transform:
+    translateY(-50%)
+    scale(.85);
+
+}
+/* ========================================= */
+/* INFO */
+/* ========================================= */
+
+.accessory-info{
+
+    width:100%;
+
+    margin-top:20px;
+
+    text-align:center;
+
+    color:#fff;
+
+    animation:fadeUp .45s;
+
+}
+
+#accessoryName{
+
+font-size: 45px;
+    margin-bottom: 23px;
+    margin-top: -60px;
+    letter-spacing: 1px;
+    text-shadow: 0 0 15px #eda41b;
+    font-weight: 100;
+
+}
+
+#accessoryOwner{
+
+    font-size: 22px;
+    margin-bottom: 18px;
+    letter-spacing:1px;
+    text-shadow: 0 0 5px #000000;
+    font-weight: 100;
+
+}
+
+
+/* ========================================= */
+/* NAVIGATION */
+/* ========================================= */
+
+.navigation{
+
+    width: 100%;
+    position: absolute;
+    bottom: 290px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 40px;
+
+}
+
+.arrow-btn{
+
+    background:none;
+
+    border:none;
+
+    cursor:pointer;
+
+}
+
+.arrow-btn img{
+
+    width: 82px;
+    cursor: pointer;
+    transition: .3s;
+
+}
+
+.arrow-btn:hover img{
+
+    transform:scale(1.08);
+
+}
+
+.arrow-btn:active img{
+
+    transform:scale(.94);
+
+}
+
+
+/* ========================================= */
+/* BOTTOM BUTTONS */
+/* ========================================= */
+
+.bottom-buttons{
+
+    width: 100%;
+    position: absolute;
+    bottom: 90px;
+    display: flex;
+    justify-content: space-evenly;
+
+}
+
+.bottom-btn{
+
+    width: 145px;
+    cursor: pointer;
+    transition: .3s;
+
+}
+
+.bottom-btn:hover{
+
+    transform:scale(1.05);
+
+}
+
+
+/* ========================================= */
+/* ANIMATION */
+/* ========================================= */
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:
+        translateY(18px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:
+        translateY(0);
+
+    }
+
+}
+
+.current-accessory.change{
+
+    animation:
+    accessoryChange .35s;
+
+}
+
+@keyframes accessoryChange{
+
+    0%{
+
+        opacity:.25;
+
+        transform:
+        translate(-50%,-50%)
+        scale(.88);
+
+    }
+
+    100%{
+
+        opacity:1;
+
+        transform:
+        translate(-50%,-50%)
+        scale(1);
+
+    }
+
+}
+
+
+/* ========================================= */
+/* DESKTOP */
+/* ========================================= */
+
+.desktop-wrapper{
+
+    width:100vw;
+
+    height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.desktop-wrapper::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background-image:
+    url("../assets/backgrounds/discover-accessory-bg.jpeg");
+
+    background-size:cover;
+
+    background-position:center;
+
+    filter:blur(35px);
+
+    transform:scale(1.15);
+
+    opacity:.75;
+
+}
+
+.mobile-frame{
+
+    width:430px;
+
+    height:932px;
+
+    position:relative;
+
+    overflow:hidden;
+
+    border-radius:22px;
+
+    box-shadow:
+    0 0 40px rgba(0,0,0,.65);
+
+    z-index:5;
+
+}
+
+
+/* ========================================= */
+/* MOBILE */
+/* ========================================= */
+
+@media(max-width:768px){
+
+.desktop-wrapper::before{
+
+display:none;
+
+}
+
+.mobile-frame{
+
+width:100%;
+
+height:100vh;
+
+border-radius:0;
+
+}
+
+.discover-title{
+
+font-size:48px;
+
+padding-top:35px;
+
+}
+
+.preview-container{
+
+height:350px;
+
+}
+
+.frame-container{
+
+width:250px;
+height:250px;
+
+}
+
+.current-accessory{
+
+width:185px;
+height:185px;
+top: 60%;
+
+}
+
+.preview{
+
+width:105px;
+height:105px;
+
+}
+
+.accessory-info{
+
+margin-top: 50px;
+
+}
+
+#accessoryName{
+
+font-size: 45px;
+margin-top: -50px;
+margin-bottom: 20px;
+
+}
+
+#accessoryOwner{
+
+font-size:22px;
+
+}
+
+.navigation{
+
+padding:0 45px;
+bottom: 260px;
+margin-top:35px;
+
+}
+
+.arrow-btn img{
+
+width:62px;
+
+}
+
+.bottom-buttons{
+
+margin-top:70px;
+
+}
+
+.bottom-btn{
+
+width:145px;
+
+}
+
+}
