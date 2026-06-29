@@ -445,4 +445,8 @@ width:72px;
         .bottom-btn {
         width: 120px;
     }
+        .navigation {
+        bottom: 255px;
+        padding: 0 30px;
+    }
 }
