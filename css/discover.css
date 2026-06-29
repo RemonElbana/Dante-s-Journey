@@ -441,4 +441,8 @@ width:72px;
         -webkit-text-stroke: 0.2px #000000;
         letter-spacing: 1px;
     }
+
+        .bottom-btn {
+        width: 120px;
+    }
 }
